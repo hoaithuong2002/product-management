@@ -5,6 +5,11 @@
     <title>Product Management</title>
 </head>
 <body>
+<style>
+    .white{
+        color: green ;
+    }
+</style>
 <input type="text" placeholder="product name" id="product-input">
 <button onclick="addProduct()">Add</button>
 <br>
@@ -13,7 +18,7 @@
 <table border="2px solid" cellspacing="0" id="main"></table>
 
 <script>
-    let products = ["Iphone", "sumsung", "realme","Vivo"];
+    let products = ["Sony Xperia","Samsung Galaxy", "Nokia","Xiaomi Redmi Note 4", "Apple Iphone6S ", "Xiaomi mi 5S plus", "Apple Iphone 8 plus","Fujitsu F-04E","Oppo A71"];
 
     function displayProduct() {
         let str = `<tr>
@@ -24,8 +29,8 @@
             str += `<tr>
                         <td>${i + 1}</td>
                         <td>${products[i]}</td>
-                        <td><button onclick="editItem(${i})">Edit</button></td>
-                        <td><button onclick="deleteItem(${i})">Remove</button></td>
+                        <td><button style="color: green" onclick="editItem(${i})"" >Edit</button></td>
+                        <td><button style="color: green" onclick="deleteItem(${i})">Delete</button></td>
                     </tr>`;
         }
         document.getElementById("main").innerHTML = str;
